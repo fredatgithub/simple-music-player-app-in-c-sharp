@@ -11,14 +11,16 @@ namespace MusicPlayerApp
     }
 
     //Create Global Variables of String Type Array to save the titles or name of the Tracks and path of the track
-    string[] paths, files;
+    string[] paths;
+    string[] files;
 
     private void BtnSelectSongs_Click(object sender, EventArgs e)
     {
-      //Code to SElect Songs
-      OpenFileDialog ofd = new OpenFileDialog();
-      //Code to select multiple files
-      ofd.Multiselect = true;
+      OpenFileDialog ofd = new OpenFileDialog
+      {
+        Multiselect = true
+      };
+
       if (ofd.ShowDialog() == DialogResult.OK)
       {
         files = ofd.SafeFileNames; //Save the names of the track in files array
@@ -39,7 +41,6 @@ namespace MusicPlayerApp
 
     private void PictureBox1_Click(object sender, EventArgs e)
     {
-      //Code to Close the App
       Close();
     }
   }
