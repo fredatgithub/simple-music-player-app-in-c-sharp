@@ -25,7 +25,7 @@ namespace MusicPlayerApp
       {
         files = ofd.SafeFileNames; //Save the names of the track in files array
         paths = ofd.FileNames; //Save the paths of the tracks in path array
-                               //Display the music titles in listbox
+        //Display the music titles in listbox
         for (int i = 0; i < files.Length; i++)
         {
           listBoxSongs.Items.Add(files[i]); //Display Songs in Listbox
